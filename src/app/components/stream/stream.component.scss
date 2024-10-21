@@ -1,0 +1,31 @@
+@import "../../../sass/variables.scss";
+
+img {
+  height: 40rem;
+  width: 40rem;
+}
+
+.invalidStream {
+  color: $lines-light;
+  text-transform: uppercase;
+}
+
+.streamImageContainer {
+  display: grid;
+  height: 40rem;
+  width: 40rem;
+  margin: 2rem;
+}
+
+.remove {
+  margin: 1rem 0.5rem !important;
+  font-size: $font-s !important;
+  display: flex;
+  justify-content: end;
+  color: $red;
+  cursor: pointer;
+
+  &:hover {
+    color: $light-red;
+  }
+}

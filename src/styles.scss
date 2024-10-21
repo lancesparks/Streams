@@ -1,0 +1,35 @@
+@import "./sass/variables.scss";
+
+html,
+body {
+  height: 100%;
+}
+* {
+  margin: 0;
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $dark-blue;
+}
+
+.headerXL {
+  font-size: $font-xl !important;
+  font-weight: bold !important;
+}
+
+.headerL {
+  font-size: $font-l !important;
+  font-weight: bold !important;
+}
+
+.headerM {
+  font-size: $font-m !important;
+  font-weight: bold !important;
+}
+
+.headerS {
+  font-size: $font-s !important;
+  font-weight: bold !important;
+}

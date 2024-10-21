@@ -1,0 +1,30 @@
+<section class="headerContainer">
+  <h1 class="headerXL navHeader">
+    <img class="logo" src="assets/logo.png" alt="" />
+    IpConfigureChallenge
+  </h1>
+  <ul class="headerXL navItems">
+    <li class="navItems_item" (click)="navigate('/')">streams</li>
+    <li class="navItems_item" (click)="navigate('/expansion')">
+      expansion challenge
+    </li>
+    @if(isLoggedIn$ |async){
+    <li
+      class="navItems_item logout"
+      (click)="logout()"
+      *ngIf="!isChallengePage"
+    >
+      Logout
+    </li>
+    }@else{
+    <li
+      class="navItems_item login"
+      (click)="openLogin()"
+      *ngIf="!isChallengePage"
+    >
+      Login
+    </li>
+
+    }
+  </ul>
+</section>

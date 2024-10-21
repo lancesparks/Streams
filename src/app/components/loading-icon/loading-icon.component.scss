@@ -1,0 +1,27 @@
+@import "../../../sass/variables.scss";
+
+.loadingContainer {
+  height: 20rem;
+  width: 20rem;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+
+  &_loading {
+    color: $lines-light;
+    text-transform: uppercase;
+  }
+}
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(359deg);
+  }
+}

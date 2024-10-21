@@ -1,0 +1,36 @@
+@import "../../../sass/variables.scss";
+
+::ng-deep {
+  .mat-mdc-dialog-surface {
+    background-color: $dark-blue;
+  }
+  .mat-mdc-dialog-component-host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $dark-blue;
+    height: 18rem;
+    width: 40rem;
+    outline: none;
+    border: none;
+  }
+
+  .mdc-button:hover {
+    background-color: $light-purple;
+  }
+
+  .mdc-dialog__content {
+    display: flex;
+    align-items: center;
+    font-size: $font-l !important;
+    text-transform: uppercase;
+    color: $lines-light !important;
+  }
+
+  .mdc-button__label {
+    font-size: $font-m !important;
+    text-transform: uppercase;
+    color: $lines-light;
+  }
+}

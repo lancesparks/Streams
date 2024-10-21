@@ -1,0 +1,19 @@
+<div class="streamImageContainer col">
+  @if(loading){
+  <app-loading-icon></app-loading-icon>
+  }
+
+  <!-- active stream -->
+  @if(!loading){ @if(imageToShow && !invalidStream){
+  <p class="remove" (click)="removeStream()">X Remove</p>
+
+  <img [src]="imageToShow" alt="steam" />
+  }
+
+  <!-- message if stream is invalid -->
+  @if(invalidStream){
+  <p class="remove" (click)="removeStream()">X Remove</p>
+
+  <p class="invalidStream headerL">unable to load stream for {{ streamID }}</p>
+  } }
+</div>

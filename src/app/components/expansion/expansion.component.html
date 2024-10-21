@@ -1,0 +1,25 @@
+<section class="expansion_main">
+  <div class="expansion_container">
+    <h1 class="expansion_header headerL">expansion challenge</h1>
+    <div class="expansion_calculate">
+      <mat-form-field>
+        <mat-label>Interations:</mat-label>
+        <input matInput maxlength="5" [(ngModel)]="iterations" numbersOnly />
+      </mat-form-field>
+      <button
+        class="expansion_calculateBtn"
+        mat-flat-button
+        (click)="calculatePiEstimate(iterations)"
+      >
+        Calculate
+      </button>
+      @if(errMsg){
+      <p class="expansion_resultErr">{{ errMsg }}</p>
+      }
+    </div>
+  </div>
+  @if(expansionResult){
+  <h1 class="expansion_result headerL">Results: {{ expansionResult }}</h1>
+  <h1 class="expansion_result headerL">Error Result: {{ errorResult }}</h1>
+  }
+</section>

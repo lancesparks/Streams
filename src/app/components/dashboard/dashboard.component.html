@@ -1,0 +1,40 @@
+<section class="dashboardContainer">
+  <!-- this list of available streams -->
+  @if(availableStreams$ | async){
+  <div class="availableStreamsContainer">
+    <h1 class="availableStreamsHeader headerL">available streams:</h1>
+    @for(camera of availableStreams$ | async;track camera){
+    <button
+      class="availableStreams"
+      [ngClass]="{ activeBtn: checkActiveCamera(camera) }"
+      mat-flat-button
+      (click)="addStream(camera)"
+    >
+      {{ camera }}
+    </button>
+    }
+  </div>
+
+  <div class="streams">
+    @if(activeStreams.length > 0){
+    <h1 class="availableStreamsHeader headerL">active streams:</h1>
+    }
+
+    <div class="center">
+      <!-- the active streams selected -->
+      <div class="streamContainer flexGrid">
+        @for(id of activeStreams;track id){
+        <app-stream
+          [streamID]="id"
+          (removeStreamEvent)="removeStream($event!)"
+        ></app-stream>
+        }
+      </div>
+    </div>
+  </div>
+  }@else{
+  <div class="loginMessage_container">
+    <h1 class="loginMessage_message headerL">Log in to view streams</h1>
+  </div>
+  }
+</section>
