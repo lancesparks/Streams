@@ -2,7 +2,7 @@
 /.angular
 /coverage
 /src/environment.ts
-
+src/environment.ts
 
 
 .DS_store
