@@ -1,8 +1,8 @@
-/node_modules
-/.angular
-/coverage
-/src/environment.ts
+node_modules
+.angular
+coverage
 src/environment.ts
+
 
 
 .DS_store
